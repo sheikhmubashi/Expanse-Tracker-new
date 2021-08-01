@@ -4,14 +4,14 @@ import { Balance } from './components/Balance'
 import { IncomeExpances } from './components/IncomeExpances'
 import { TransectionList } from './components/TransectionList'
 import { AddTransection } from './components/AddTransection'
-
+import { GlobalProvider } from './context/GlobalState';
 
 
 import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <GlobalProvider>
      <Header />
      <div className="container">
      <Balance /> 
@@ -19,7 +19,7 @@ const App = () => {
      <TransectionList />
      <AddTransection />
      </div>
-    </div>
+    </GlobalProvider>
   )
 }
 
